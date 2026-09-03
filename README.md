@@ -10,7 +10,7 @@ A machine learning project that predicts the selling price of used cars from veh
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://pandas.pydata.org/">
-    <img src="https://skillicons.dev/icons?i=pandas" width="45" alt="Pandas">
+    <img src="https://cdn.simpleicons.org/pandas" width="45" alt="Pandas">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://scikit-learn.org/">
@@ -18,7 +18,7 @@ A machine learning project that predicts the selling price of used cars from veh
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://streamlit.io/">
-    <img src="https://skillicons.dev/icons?i=streamlit" width="45" alt="Streamlit">
+    <img src="https://cdn.simpleicons.org/streamlit" width="45" alt="Streamlit">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://git-scm.com/">
@@ -353,6 +353,8 @@ Model Serialization
 - Add model explainability
 - Provide prediction intervals
 - Deploy the application publicly
+
+---
 
 ## Author
 
