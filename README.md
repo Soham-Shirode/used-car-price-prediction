@@ -4,6 +4,10 @@
 
 A machine learning project that predicts the selling price of used cars from vehicle specifications and usage history.
 
+### Live Demo
+
+[**Try AutoValue →**](https://autovalue-cars.streamlit.app/)
+
 <p align="center">
   <a href="https://www.python.org/">
     <img src="https://skillicons.dev/icons?i=python" width="45" alt="Python">
