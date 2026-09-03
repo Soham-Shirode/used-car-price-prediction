@@ -5,13 +5,29 @@
 A machine learning project that predicts the selling price of used cars from vehicle specifications and usage history.
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=flat-square&logo=pandas&logoColor=white">
-<img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=flat-square&logo=scikit-learn&logoColor=white">
-<img src="https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?style=flat-square&logo=streamlit&logoColor=white">
-<img src="https://img.shields.io/badge/Git-GitHub-181717?style=flat-square&logo=github&logoColor=white">
-
+  <a href="https://www.python.org/">
+    <img src="https://skillicons.dev/icons?i=python" width="45" alt="Python">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://pandas.pydata.org/">
+    <img src="https://skillicons.dev/icons?i=pandas" width="45" alt="Pandas">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://scikit-learn.org/">
+    <img src="https://skillicons.dev/icons?i=sklearn" width="45" alt="Scikit-learn">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://streamlit.io/">
+    <img src="https://skillicons.dev/icons?i=streamlit" width="45" alt="Streamlit">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://git-scm.com/">
+    <img src="https://skillicons.dev/icons?i=git" width="45" alt="Git">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/">
+    <img src="https://skillicons.dev/icons?i=github" width="45" alt="GitHub">
+  </a>
 </p>
 
 ---
@@ -30,7 +46,7 @@ The final model is a **Lasso Regression model trained on a log-transformed targe
 
 The final model was evaluated on an unseen test set.
 
-| Metric | Result |
+| Metric | Test Result |
 |---|---:|
 | R² Score | **0.891** |
 | Mean Absolute Error | **₹113,602** |
@@ -255,22 +271,6 @@ used-car-price-prediction/
 
 ---
 
-## Technology Stack
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white">
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white">
-<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white">
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white">
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white">
-
-</p>
-
----
-
 ## Installation
 
 ### Clone
@@ -353,7 +353,6 @@ Model Serialization
 - Add model explainability
 - Provide prediction intervals
 - Deploy the application publicly
-
 
 ## Author
 
