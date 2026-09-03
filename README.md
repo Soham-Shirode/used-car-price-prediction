@@ -8,6 +8,8 @@ A machine learning project that predicts the selling price of used cars from veh
 
 [**Try AutoValue →**](https://autovalue-cars.streamlit.app/)
 
+### Tech Stack
+
 <p align="center">
   <a href="https://www.python.org/">
     <img src="https://skillicons.dev/icons?i=python" width="45" alt="Python">
