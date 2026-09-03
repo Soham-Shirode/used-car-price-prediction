@@ -343,44 +343,52 @@ left, right = st.columns(2, gap="large")
 
 with left:
 
+    brand_options = sorted(data["brand"].dropna().unique())
+
     brand = st.selectbox(
         "Brand",
-        sorted(data["brand"].dropna().unique())
+        ["Select brand"] + brand_options
     )
 
-    available_models = sorted(
-        data[data["brand"] == brand]["model"]
-        .dropna()
-        .unique()
-    )
+    if brand != "Select brand":
+        available_models = sorted(
+            data[data["brand"] == brand]["model"]
+            .dropna()
+            .unique()
+        )
+    else:
+        available_models = []
 
     model_name = st.selectbox(
         "Model",
-        available_models
+        ["Select model"] + available_models
     )
 
     vehicle_age = st.number_input(
         "Vehicle age (years)",
         min_value=0,
         max_value=30,
-        value=5,
-        step=1
+        value=None,
+        step=1,
+        placeholder="Enter vehicle age"
     )
 
     km_driven = st.number_input(
         "Kilometers driven",
         min_value=100,
         max_value=3800000,
-        value=50000,
-        step=1000
+        value=None,
+        step=1000,
+        placeholder="Enter kilometres driven"
     )
 
     seats = st.number_input(
         "Number of seats",
         min_value=1,
         max_value=9,
-        value=5,
-        step=1
+        value=None,
+        step=1,
+        placeholder="Enter vehicle age"
     )
 
 
@@ -388,41 +396,44 @@ with right:
 
     fuel_type = st.selectbox(
         "Fuel type",
-        sorted(data["fuel_type"].dropna().unique())
+        ["Select fuel type"] + sorted(data["fuel_type"].dropna().unique())
     )
 
     transmission_type = st.selectbox(
         "Transmission",
-        sorted(data["transmission_type"].dropna().unique())
+        ["Select transmission"] + sorted(data["transmission_type"].dropna().unique())
     )
 
     seller_type = st.selectbox(
         "Seller type",
-        sorted(data["seller_type"].dropna().unique())
+        ["Select seller type"] + sorted(data["seller_type"].dropna().unique())
     )
 
     mileage = st.number_input(
         "Mileage (km/l)",
         min_value=4.0,
         max_value=33.54,
-        value=19.67,
-        step=0.1
+        value=None,
+        step=0.1,
+        placeholder="Enter mileage"
     )
 
     engine = st.number_input(
         "Engine displacement (cc)",
         min_value=793,
         max_value=6592,
-        value=1200,
-        step=50
+        value=None,
+        step=50,
+        placeholder="Enter engine displacement"
     )
 
     max_power = st.number_input(
         "Maximum power (bhp)",
         min_value=38.4,
         max_value=626.0,
-        value=88.5,
-        step=1.0
+        value=None,
+        step=1.0,
+        placeholder="Enter maximum power"
     )
 
 
@@ -441,6 +452,24 @@ predict = st.button(
 # ============================================================
 
 if predict:
+
+    required_values = [
+        brand != "Select brand",
+        model_name != "Select model",
+        fuel_type != "Select fuel type",
+        transmission_type != "Select transmission",
+        seller_type != "Select seller type",
+        vehicle_age is not None,
+        km_driven is not None,
+        seats is not None,
+        mileage is not None,
+        engine is not None,
+        max_power is not None
+    ]
+
+    if not all(required_values):
+        st.warning("Please complete all vehicle details before estimating the market value.")
+        st.stop()
 
     input_data = pd.DataFrame({
         "vehicle_age": [vehicle_age],
